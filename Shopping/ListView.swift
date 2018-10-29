@@ -29,13 +29,13 @@ class ShoppingListController: UICollectionViewController, UICollectionViewDelega
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let shoppingItem = itemControllerReference.groceryList[indexPath.item]
         
-        itemControllerReference.updateGroceries(singleItem: shoppingItem)
+       // itemControllerReference.updateGroceries(singleItem: shoppingItem)
         collectionView.reloadData()
         
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shoppingCell", for: indexPath) as! shopCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shopCell", for: indexPath) as! shopCell
         
         let shoppingItem = itemControllerReference.groceryList[indexPath.item]
         cell.groceryItem = shoppingItem

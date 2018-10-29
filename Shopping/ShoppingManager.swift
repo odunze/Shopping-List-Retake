@@ -36,14 +36,14 @@ class ShoppingManager {
         }
     }
     
-    func updateGroceries(singleItem: ShoppingItem) {
+   /* func updateGroceries(singleItem: ShoppingItem) {
         guard let index = groceryList.index(of: singleItem) else { return }
         var tempItem = singleItem
         tempItem.added = !singleItem.added
         groceryList.remove(at: index)
         groceryList.insert(tempItem, at: index)
         saveToPersistence()
-    }
+    } */
     
     //Saving
     func saveToPersistence() {
